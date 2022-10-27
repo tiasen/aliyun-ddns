@@ -401,7 +401,7 @@ namespace aliyun_ddns
                 var match = regex.Match(subDomain);
                 string domainName;
                 string rr;
-                if (match.Success)
+                if (!match.Success)
                 {
                     rr = match.Groups[1].Value;
                     domainName = match.Groups[2].Value + "." + match.Groups[3].Value;
